@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Najin objem</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .person {
+      position: absolute;
+      bottom: 50px;
+      width: 150px;
+      transition: all 4s ease;
+      z-index: 2;
+    }
+
+    .left {
+      left: -160px;
+      animation: moveLeft 4s forwards;
+      animation-delay: 0s, 4s;
+    }
+
+    .right {
+      right: -160px;
+      animation: moveRight 4s forwards;
+      animation-delay: 0s, 4s;
+    }
+
+    @keyframes moveLeft {
+      to {
+        left: calc(50% - 160px);
+      }
+    }
+
+    @keyframes moveRight {
+      to {
+        right: calc(50% - 160px);
+      }
+    }
+
+    .hug {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      opacity: 0;
+      transition: opacity 1s ease;
+      z-index: 3;
+      animation: showHug 1s ease forwards;
+      animation-delay: 4s;
+      width: 70%;
+      height: 70%;
+    }
+
+    @keyframes showHug {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .heart {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 60px;
+      color: red;
+      text-shadow: 0 0 20px red;
+      z-index: 4;
+      animation: popHeart 1s ease forwards;
+      animation-delay: 4.5s;
+    }
+
+    @keyframes popHeart {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      60% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1); }
+    }
+
+    .caption {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ff3366;
+      font-size: 3rem;
+      text-shadow: 0 0 10px #ff0033;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 5s;
+      z-index: 5;
+      font-weight: 500;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeOut {
+       to {
+     opacity: 0;
+     visibility: hidden;
+    }
+   }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <!-- Sliki posameznikov -->
+    <img src="fant.png" class="person left" alt="Fant">
+    <img src="dekle1.png" class="person right" alt="Dekle">
+
+    <!-- Slika objema -->
+    <img src="objem1.png" class="hug" alt="Objem">
+
+    <!-- Srce -->
+    <div class="heart">❤️</div>
+
+    <!-- Napis -->
+    <div class="caption">V objemu že 1 leto in pol (547 dni)</div>
+  </div>
+</body>
+</html>

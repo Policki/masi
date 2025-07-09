@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Za naju 💖</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #ff4d88;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d88;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #e03e73;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff4d88; }
+      to { text-shadow: 0 0 20px #ff4d88, 0 0 30px #ff0055; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Za naju 💖</h1>
+  <p>
+    Posvetilo:<br>
+    
+    Za najlepše leto in pol mojega življenja
+  </p>
+
+  <button onclick="window.location.href='galerija.html'">Nadaljuj</button>
+
+</body>
+</html>
